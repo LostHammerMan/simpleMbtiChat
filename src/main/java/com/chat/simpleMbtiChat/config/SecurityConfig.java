@@ -1,4 +1,4 @@
-package com.labor.laborSolution.config;
+package com.chat.simpleMbtiChat.config;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class SecurityConfig {
 			.csrf(csrf -> csrf.disable())
 			.cors(cors -> cors.configurationSource(configurationSource()))
 			.authorizeHttpRequests(auth -> auth
-					.requestMatchers("/api/**").permitAll()
+					.requestMatchers("/api/**", "/hello/**","/solution/**").permitAll()
 					.anyRequest().authenticated()
 					
 					)
@@ -31,7 +31,7 @@ public class SecurityConfig {
 	@Bean
 	public CorsConfigurationSource configurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOrigins(List.of("http://localhost:3000"));
+		configuration.setAllowedOrigins(List.of("http://localhost:5173"));
 		configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);

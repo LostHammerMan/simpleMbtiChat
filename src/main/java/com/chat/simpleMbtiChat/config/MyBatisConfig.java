@@ -1,4 +1,4 @@
-package com.labor.laborSolution.config;
+package com.chat.simpleMbtiChat.config;
 
 import org.apache.catalina.core.ApplicationContext;
 

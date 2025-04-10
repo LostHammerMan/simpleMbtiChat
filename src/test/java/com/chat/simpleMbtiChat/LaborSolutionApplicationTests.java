@@ -1,4 +1,4 @@
-package com.labor.laborSolution;
+package com.chat.simpleMbtiChat;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
